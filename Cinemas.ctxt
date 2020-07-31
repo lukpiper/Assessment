@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Cinemas
+comment0.text=\ <description\ of\ class\ Cinemas>\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=Cinemas()
+comment2.text=\r\n\ Constructor\r\n
+comment3.params=title\ director\ genre
+comment3.target=void\ addMovie(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=4

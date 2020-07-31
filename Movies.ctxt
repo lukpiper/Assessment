@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Movies
+comment0.text=\ <description\ of\ class\ Movies>\r\n
+comment1.params=title\ director\ genre
+comment1.target=Movies(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\ \r\nConstructors
+numComments=2

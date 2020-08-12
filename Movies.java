@@ -22,11 +22,31 @@ public class Movies{
     
     /** 
       Constructors */
-    public Movies(String title, String director, String genre) {
+    public Movies(String title, String director, String genre, int rating) {
         this.title = title;
         this.director = director;
         this.genre = genre;
-        //this.rating = rating;
+        this.rating = rating;
+    }
+
+    public String getTitle(String search) {
+        //if (search != title) {
+            //UI.println("Title of movie cannot be found");
+        //} else {
+        return this.title;
+        //}
+    }
+    
+    public String getDirector() {
+        return this.director;
+    }
+
+    public String getGenre() {
+        return this.genre;
+    }
+    
+    public int getRating() {
+        return this.rating;
     }
 }
 

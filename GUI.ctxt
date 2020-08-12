@@ -1,11 +1,13 @@
 #BlueJ class context
-comment0.target=GUI
-comment0.text=\ <description\ of\ class\ GUI>\r\n
+comment0.params=
+comment0.target=GUI()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ the\ GUI\ class\r\n
 comment1.params=
-comment1.target=GUI()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ the\ GUI\ class\r\n
-comment2.params=
-comment2.target=void\ newMovie()
-comment3.params=args
-comment3.target=void\ main(java.lang.String[])
-numComments=4
+comment1.target=void\ newMovie()
+comment2.params=search
+comment2.target=void\ searchMovie(java.lang.String)
+comment3.params=search
+comment3.target=void\ rateMovie(java.lang.String)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

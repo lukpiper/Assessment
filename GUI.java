@@ -15,9 +15,6 @@ import java.util.HashMap;
  */
 public class GUI{
     private Cinemas c = new Cinemas();
-    private int DISTMIN = 1;
-    private int DISTMAX = 10;
-    private int DISTINIT = 5;
     /**
      * Constructor for objects of the GUI class
      */
@@ -26,26 +23,37 @@ public class GUI{
         UI.initialise();
         UI.addButton("Quit", UI::quit);
         UI.addButton("Add a Movie", this::newMovie);
-        //UI.addButton("Search for a Movie", this::searchMovie);
+        // Search Bar
+        UI.addTextField("Search", this::searchMovie);
+        UI.addTextField("Rate a movie", this::rateMovie);
     }
 
     public void newMovie() {
         // Ask user for information on user
-        //UI.println("Please leave your movies info below");
-        String title = UI.askString("What is the Title: ");
-        String director = UI.askString("Who is the Director: ");
-        String genre = UI.askString("What is the Genre: ");
-        //int rating = UI.addSlider("Rating", DISTMIN, DISTMAX, DISTINIT);
-        
+        UI.println("Please leave your movies info below\n");
+        String title = UI.askString("Title: ");
+        String director = UI.askString("Director: ");
+        String genre = UI.askString("Genre: ");
+        int rating = 0;
         // Send user inputs to addMovie method
-        c.addMovie(title, director, genre);
+        c.addMovie(title, director, genre, rating);
         
         // Print statement of successful add to user
-        UI.println("Movie added");
+        UI.println("Movie added\n");
         
-        UI.println(title);
-        UI.println(director);
-        UI.println(genre);
+        //UI.println("Title: " + title);
+        //UI.println("Director: " + director);
+        //UI.println("Genre: " + genre);
+    }
+    
+    public void searchMovie(String search) {
+       // Ask user for specific movie they want to find and send input to searchMovies method
+       //String search = UI.askString("What movie do you want to search for: ");
+       c.searchMovies(search);
+    }
+    
+    public void rateMovie(String search) {
+        c.rateMovies(search);
     }
     
     public static void main(String[] args){
@@ -53,3 +61,4 @@ public class GUI{
     }
 
 }
+

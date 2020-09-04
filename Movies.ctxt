@@ -1,13 +1,17 @@
 #BlueJ class context
-comment0.params=title\ director\ genre\ rating
-comment0.target=Movies(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
-comment0.text=\ \r\nConstructors
-comment1.params=search
-comment1.target=java.lang.String\ getTitle(java.lang.String)
-comment2.params=
-comment2.target=java.lang.String\ getDirector()
+comment0.target=Movies
+comment0.text=\ <description\ of\ class\ Movies>\r\n
+comment1.params=title\ director\ genre\ rating
+comment1.target=Movies(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment1.text=\ \r\nConstructors
+comment2.params=search
+comment2.target=java.lang.String\ getTitle(java.lang.String)
 comment3.params=
-comment3.target=java.lang.String\ getGenre()
+comment3.target=java.lang.String\ getDirector()
 comment4.params=
-comment4.target=int\ getRating()
-numComments=5
+comment4.target=java.lang.String\ getGenre()
+comment5.params=
+comment5.target=int\ getRating()
+comment6.params=newRating
+comment6.target=void\ changeRating(int)
+numComments=7

@@ -27,6 +27,7 @@ public class Movies{
         this.director = director;
         this.genre = genre;
         this.rating = rating;
+        UI.println(this.rating);
     }
 
     public String getTitle(String search) {
@@ -47,6 +48,10 @@ public class Movies{
     
     public int getRating() {
         return this.rating;
+    }
+    
+    public void changeRating(int newRating) {
+        this.rating = newRating;
     }
 }
 

@@ -21,11 +21,13 @@ public class GUI{
     public GUI() {
         // Add Buttons
         UI.initialise();
-        UI.addButton("Quit", UI::quit);
-        UI.addButton("Add a Movie", this::newMovie);
-        // Search Bar
+        // Search Bars
         UI.addTextField("Search", this::searchMovie);
         UI.addTextField("Rate a movie", this::rateMovie);
+        // Buttons
+        UI.addButton("Add a Movie", this::newMovie);
+        UI.addButton("Recommend", this::recommendMovie);
+        UI.addButton("Quit", UI::quit);
     }
 
     public void newMovie() {
@@ -34,28 +36,33 @@ public class GUI{
         String title = UI.askString("Title: ");
         String director = UI.askString("Director: ");
         String genre = UI.askString("Genre: ");
+        title = title.toLowerCase();
+        director = director.toLowerCase();
+        genre = genre.toLowerCase();
+        
         int rating = 0;
         // Send user inputs to addMovie method
         c.addMovie(title, director, genre, rating);
         
         // Print statement of successful add to user
         UI.println("Movie added\n");
-        
-        //UI.println("Title: " + title);
-        //UI.println("Director: " + director);
-        //UI.println("Genre: " + genre);
     }
     
     public void searchMovie(String search) {
        // Ask user for specific movie they want to find and send input to searchMovies method
        //String search = UI.askString("What movie do you want to search for: ");
-       c.searchMovies(search);
+       c.searchMovies(search.toLowerCase());
     }
     
     public void rateMovie(String search) {
-        c.rateMovies(search);
+        c.rateMovies(search.toLowerCase());
     }
     
+    public void recommendMovie() {
+        //String pick = ("What is your favourite genre: ");
+        //pick = pick.toLowerCase();
+        //c.recommendMovies(pick);
+    }
     public static void main(String[] args){
         GUI obj = new GUI();
     }

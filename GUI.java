@@ -26,7 +26,7 @@ public class GUI{
         UI.addTextField("Rate a movie", this::rateMovie);
         // Buttons
         UI.addButton("Add a Movie", this::newMovie);
-        UI.addButton("Recommend", this::recommendMovie);
+        UI.addButton("Your top picks", this::recommendMovie);
         UI.addButton("Quit", UI::quit);
     }
 
@@ -36,6 +36,7 @@ public class GUI{
         String title = UI.askString("Title: ");
         String director = UI.askString("Director: ");
         String genre = UI.askString("Genre: ");
+        
         title = title.toLowerCase();
         director = director.toLowerCase();
         genre = genre.toLowerCase();
@@ -59,9 +60,9 @@ public class GUI{
     }
     
     public void recommendMovie() {
-        //String pick = ("What is your favourite genre: ");
+        //String pick = UI.askString("What is your favourite genre: ");
         //pick = pick.toLowerCase();
-        //c.recommendMovies(pick);
+        c.recommendMovies();
     }
     public static void main(String[] args){
         GUI obj = new GUI();

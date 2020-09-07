@@ -13,21 +13,22 @@ import java.util.HashMap;
 
 /** <description of class Movies>
  */
-public class Movies{
+public class Movies {
     // Fields
     private String title;
     private String director;
     private String genre;
     private int rating;
+    private String explicitRating;
     
     /** 
       Constructors */
-    public Movies(String title, String director, String genre, int rating) {
+    public Movies(String title, String director, String genre, int rating, String explicitRating) {
         this.title = title;
         this.director = director;
         this.genre = genre;
         this.rating = rating;
-        UI.println(this.rating);
+        this.explicitRating = explicitRating;
     }
 
     public String getTitle(String search) {
@@ -48,6 +49,10 @@ public class Movies{
     
     public int getRating() {
         return this.rating;
+    }
+    
+    public String getExplicitRating() {
+        return this.explicitRating;
     }
     
     public void changeRating(int newRating) {

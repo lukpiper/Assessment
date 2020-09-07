@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 /** <description of class GUI>
  */
-public class GUI{
+public class GUI {
     private Cinemas c = new Cinemas();
     /**
      * Constructor for objects of the GUI class
@@ -33,20 +33,30 @@ public class GUI{
     public void newMovie() {
         // Ask user for information on user
         UI.println("Please leave your movies info below\n");
-        String title = UI.askString("Title: ");
-        String director = UI.askString("Director: ");
-        String genre = UI.askString("Genre: ");
-        
-        title = title.toLowerCase();
-        director = director.toLowerCase();
-        genre = genre.toLowerCase();
-        
-        int rating = 0;
-        // Send user inputs to addMovie method
-        c.addMovie(title, director, genre, rating);
-        
-        // Print statement of successful add to user
-        UI.println("Movie added\n");
+        while (true) {
+            String title = UI.askString("Title: ");
+            if (title.length() == 0) {
+                UI.println("Please enter a movie title");
+            } 
+            else {
+                title = title.toLowerCase();
+                String director = UI.askString("Director: ");
+                String genre = UI.askString("Genre: ");
+                director = director.toLowerCase();
+                genre = genre.toLowerCase();
+                
+                String explicitRating = UI.askString("Explicity tags: ");
+                explicitRating = explicitRating.toLowerCase();
+                
+                int rating = 0;
+                // Send user inputs to addMovie method
+                c.addMovie(title, director, genre, rating, explicitRating);
+                
+                // Print statement of successful add to user
+                UI.println("Movie added\n");
+                break;
+            }
+        }
     }
     
     public void searchMovie(String search) {
@@ -64,7 +74,8 @@ public class GUI{
         //pick = pick.toLowerCase();
         c.recommendMovies();
     }
-    public static void main(String[] args){
+    
+    public static void main(String[] args) {
         GUI obj = new GUI();
     }
 
